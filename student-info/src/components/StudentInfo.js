@@ -1,8 +1,8 @@
 import React from "react";
 import StudentInfoCard from "./StudentInfoCard";
 
+let doNothing = () => {};
 export default function StudentInfo(props) {
-  let doNothing = () => {};
   let previousStudent = props.previousStudent || doNothing;
   let nextStudent = props.nextStudent || doNothing;
   let deleteStudent = props.deleteStudent || doNothing;
