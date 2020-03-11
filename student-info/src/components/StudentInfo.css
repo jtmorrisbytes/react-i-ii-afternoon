@@ -1,4 +1,5 @@
 #StudentInfo {
   height: calc(100vh - var(--Navigation-height));
   background-color: #222222;
+  padding: 20% 3em;
 }
