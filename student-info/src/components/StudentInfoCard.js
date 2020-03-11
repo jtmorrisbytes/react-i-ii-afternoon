@@ -10,7 +10,7 @@ function StudentOverviewItem(props) {
 }
 export default function StudentInfoCard(props) {
   // hometown displays nothing if props are undefined
-  let { city, country, employer, title, name } = props.student;
+  let { city, country, employer, title, name, favoriteMovies } = props.student;
   let hometown = (city || "") + (city && country ? ", " : "") + (country || "");
   return (
     <div className="StudentInfoCard">
@@ -21,7 +21,13 @@ export default function StudentInfoCard(props) {
         <StudentOverviewItem label="Job Title:" text={title} />
         <StudentOverviewItem label="Employer:" text={employer} />
       </div>
-      <div className="studentFavorites"></div>
+      <div className="studentFavorites">
+        <ol>
+          {favoriteMovies.map((movie, index) => {
+            return <li key={"favoriteMovie-" + index}>{movie}</li>;
+          })}
+        </ol>
+      </div>
     </div>
   );
 }
