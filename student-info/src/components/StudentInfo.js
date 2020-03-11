@@ -15,10 +15,7 @@ export default function StudentInfo(props) {
         currentPosition={props.currentPosition}
       />
       <div id="StudentInfoControls">
-        <button
-          onClick={previousStudent}
-          disabled={!(props.currentStudent > 0)}
-        >
+        <button onClick={previousStudent} disabled={props.currentStudent <= 0}>
           Previous
         </button>
         <div className="StudentInfoActionGroup">
@@ -26,7 +23,12 @@ export default function StudentInfo(props) {
           <button onClick={deleteStudent}>Delete</button>
           <button onClick={addStudent}>New</button>
         </div>
-        <button onClick={nextStudent}>Next</button>
+        <button
+          onClick={nextStudent}
+          disabled={props.currentStudent >= props.numStudents - 1}
+        >
+          Next
+        </button>
       </div>
     </div>
   );
