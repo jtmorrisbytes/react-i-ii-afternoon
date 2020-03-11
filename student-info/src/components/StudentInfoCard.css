@@ -23,7 +23,18 @@
 
 .StudentInfoCard > * {
   margin-left: 1rem;
+  margin-right: 1rem;
 }
+
+.studentFavorites {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.studentFavorites .favoritesHeading {
+  margin: 0;
+}
+
 @media screen and (min-width: 500px) {
   .StudentInfoCard > * {
     margin-left: 2rem;
