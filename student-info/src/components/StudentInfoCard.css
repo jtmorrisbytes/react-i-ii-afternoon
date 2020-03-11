@@ -13,3 +13,16 @@
   text-decoration: underline;
   text-decoration-color: #11a7d7;
 }
+.StudentInfoCard > * {
+  margin-left: 1em;
+}
+@media screen and (min-width: 500px) {
+  .StudentInfoCard > * {
+    margin-left: 2em;
+  }
+}
+@media screen and (min-width: 720px) {
+  .StudentInfoCard > * {
+    margin-left: 3em;
+  }
+}
