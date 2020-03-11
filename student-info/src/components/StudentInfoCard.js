@@ -22,7 +22,7 @@ export default function StudentInfoCard(props) {
         <StudentOverviewItem label="Employer:" text={employer} />
       </div>
       <div className="studentFavorites">
-        <h3>Favorite Movies</h3>
+        <h3 className="favoritesHeading">Favorite Movies</h3>
         <ol>
           {favoriteMovies.map((movie, index) => {
             return <li key={"favoriteMovie-" + index}>{movie}</li>;

@@ -1,6 +1,6 @@
 .StudentInfoCard {
   background-color: #ebebeb;
-  padding: 0.5em;
+  padding: 0.5rem;
 }
 .StudentInfoCard .listPosition {
   width: 100%;
@@ -17,17 +17,20 @@
 .studentOverviewItem .label {
   font-weight: bold;
 }
+.studentOverviewItem {
+  margin-bottom: 0.3rem;
+}
 
 .StudentInfoCard > * {
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 @media screen and (min-width: 500px) {
   .StudentInfoCard > * {
-    margin-left: 2em;
+    margin-left: 2rem;
   }
 }
 @media screen and (min-width: 720px) {
   .StudentInfoCard > * {
-    margin-left: 3em;
+    margin-left: 3rem;
   }
 }

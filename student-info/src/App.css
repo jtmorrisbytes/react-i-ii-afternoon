@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 :root {
-  --Navigation-height: 3em;
+  --Navigation-height: 3rem;
 }
 html,
 body {
