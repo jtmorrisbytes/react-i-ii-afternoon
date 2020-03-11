@@ -14,11 +14,11 @@ export default function StudentInfo(props) {
         student={props.student}
         currentPosition={props.currentPosition}
       />
-      <div id="StudentInfoControls">
+      <div className="controls">
         <button onClick={previousStudent} disabled={props.currentStudent <= 0}>
           Previous
         </button>
-        <div className="StudentInfoActionGroup">
+        <div className="actionGroup">
           <button>Edit</button>
           <button onClick={deleteStudent}>Delete</button>
           <button onClick={addStudent}>New</button>
