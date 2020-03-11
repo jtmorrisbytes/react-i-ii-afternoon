@@ -1,6 +1,6 @@
 import React from "react";
 import StudentInfoCard from "./StudentInfoCard";
-
+import "./StudentInfo.css";
 let doNothing = () => {};
 export default function StudentInfo(props) {
   let previousStudent = props.previousStudent || doNothing;

@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./StudentInfoCard.css";
 function StudentOverviewItem(props) {
   return (
     <div className="studentOverviewItem">
@@ -14,7 +14,7 @@ export default function StudentInfoCard(props) {
   let hometown = (city || "") + (city && country ? ", " : "") + (country || "");
   return (
     <div className="StudentInfoCard">
-      <span className="listPosition">{props.currentPosition || "0/0"}</span>
+      <div className="listPosition">{props.currentPosition || "0/0"}</div>
       <h1 className="studentHeading">{name.first + " " + name.last}</h1>
       <div className="studentOverview">
         <StudentOverviewItem label="From:" text={hometown} />
@@ -22,6 +22,7 @@ export default function StudentInfoCard(props) {
         <StudentOverviewItem label="Employer:" text={employer} />
       </div>
       <div className="studentFavorites">
+        <h3>Favorite Movies</h3>
         <ol>
           {favoriteMovies.map((movie, index) => {
             return <li key={"favoriteMovie-" + index}>{movie}</li>;
