@@ -13,6 +13,11 @@
   text-decoration: underline;
   text-decoration-color: #11a7d7;
 }
+
+.studentOverviewItem .label {
+  font-weight: bold;
+}
+
 .StudentInfoCard > * {
   margin-left: 1em;
 }
