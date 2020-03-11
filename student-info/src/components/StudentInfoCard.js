@@ -16,6 +16,7 @@ export default function StudentInfoCard(props) {
     (props.country || "");
   return (
     <div className="StudentInfoCard">
+      <span className="listPosition">{props.listPosition || "0/0"}</span>
       <h1 className="studentHeading">Student Card</h1>
       <div className="studentOverview">
         <StudentOverviewItem label="From:" text={hometown} />
