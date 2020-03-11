@@ -9,7 +9,10 @@ export default function StudentInfo(props) {
   let addStudent = props.deleteStudent || doNothing;
   return (
     <div id="StudentInfo">
-      <StudentInfoCard student={props.student} />
+      <StudentInfoCard
+        student={props.student}
+        currentPosition={props.currentPosition}
+      />
       <div id="StudentInfoControls">
         <button onClick={previousStudent}>Previous</button>
         <div className="StudentInfoActionGroup">
