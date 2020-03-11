@@ -41,10 +41,17 @@ export default class App extends React.Component {
   goToStudent = idNum => {};
 
   render() {
+    let currentPosition =
+      this.state.currentStudent + 1 + "/" + this.state.studentData.length;
     return (
       <div ID="App">
         <Navigation />
-        <StudentInfo />
+        <StudentInfo
+          nextStudent={this.nextStudent}
+          previousStudent={this.previousStudent}
+          student={this.state.studentData[this.state.currentStudent]}
+          currentPosition={currentPosition}
+        />
       </div>
     );
   }
