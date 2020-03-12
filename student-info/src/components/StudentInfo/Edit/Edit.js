@@ -1,5 +1,5 @@
 import React from "react";
-import "./StudentInfoCard.css";
+import "./Edit.css";
 function StudentOverviewItem(props) {
   return (
     <div className="studentOverviewItem">
@@ -8,14 +8,19 @@ function StudentOverviewItem(props) {
     </div>
   );
 }
-export default function StudentInfoCard(props) {
+export default function Edit(props) {
   // hometown displays nothing if props are undefined
   let { city, country, employer, title, name, favoriteMovies } = props.student;
   let hometown = (city || "") + (city && country ? ", " : "") + (country || "");
   return (
-    <div className="StudentInfoCard">
+    <div className="StudentInfo Card">
       <div className="listPosition">{props.currentPosition || "0/0"}</div>
-      <h1 className="studentHeading">{name.first + " " + name.last}</h1>
+
+      <div className="studentName">
+        <input type="text" />
+        <input type="text" />
+      </div>
+
       <div className="studentOverview">
         <StudentOverviewItem label="From:" text={hometown} />
         <StudentOverviewItem label="Job Title:" text={title} />

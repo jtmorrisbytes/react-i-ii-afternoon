@@ -1,14 +1,14 @@
-.StudentInfoCard {
+.StudentInfo.card {
   background-color: #ebebeb;
   padding: 0.5rem;
 }
-.StudentInfoCard .listPosition {
+.StudentInfo.card .listPosition {
   width: 100%;
   margin: 0;
   text-align: right;
   font-size: 125%;
 }
-.StudentInfoCard .studentHeading {
+.StudentInfo.card .studentHeading {
   margin-top: 0;
   text-decoration: underline;
   text-decoration-color: #11a7d7;
@@ -17,11 +17,11 @@
 .studentOverviewItem .label {
   font-weight: bold;
 }
-.studentOverviewItem {
+.studentOverview.Item {
   margin-bottom: 0.3rem;
 }
 
-.StudentInfoCard > * {
+.StudentInfo.Card > * {
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -36,12 +36,12 @@
 }
 
 @media screen and (min-width: 500px) {
-  .StudentInfoCard > * {
+  .StudentInfo.card > * {
     margin-left: 2rem;
   }
 }
 @media screen and (min-width: 720px) {
-  .StudentInfoCard > * {
+  .StudentInfocard > * {
     margin-left: 3rem;
   }
 }

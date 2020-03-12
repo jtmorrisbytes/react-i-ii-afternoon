@@ -1,20 +1,10 @@
-.StudentInfoCard {
-  background-color: #ebebeb;
-  padding: 0.5rem;
-}
-.StudentInfoCard .listPosition {
-  width: 100%;
-  margin: 0;
-  text-align: right;
-  font-size: 125%;
-}
-.StudentInfoCard .studentHeading {
+.StudentInfo.Card .studentHeading {
   margin-top: 0;
   text-decoration: underline;
   text-decoration-color: #11a7d7;
 }
 
-.studentOverviewItem .label {
+.studentOverview.Item .label {
   font-weight: bold;
 }
 .studentOverviewItem {

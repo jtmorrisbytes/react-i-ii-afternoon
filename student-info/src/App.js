@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import StudentInfo from "./components/StudentInfo";
+import StudentInfo from "./components/StudentInfo/StudentInfo";
 
 function Navigation(props) {
   return (

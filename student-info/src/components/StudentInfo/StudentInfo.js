@@ -1,9 +1,10 @@
 import React from "react";
-import StudentInfoCard from "./StudentInfoCard";
+import Card from "./Card/Card";
 import "./StudentInfo.css";
-import "./StudentInfoEdit";
-import data from "../data";
+import Edit from "./Edit/Edit";
+import data from "../../data";
 let doNothing = () => {};
+
 const studentModel = {
   id: Number(),
   name: { first: "", last: "" },
@@ -11,7 +12,7 @@ const studentModel = {
   country: "",
   employer: "",
   title: "",
-  favoriteMovies: []
+  favoriteMovies: [""]
 };
 
 export default class StudentInfo extends React.Component {
@@ -24,25 +25,25 @@ export default class StudentInfo extends React.Component {
     };
   }
 
-  // nextStudent = () => {
-  //   // I know im being paranoid here, but just in case...
-  //   if (this.state.currentStudent > this.state.studentData.length - 1) {
-  //     this.setState({ currentStudent: this.state.studentData.length - 1 });
-  //     console.info(
-  //       "somehow the current student was set beyond the index of the list. resetting..."
-  //     );
-  //     return;
-  //   } else if (this.state.currentStudent < this.state.studentData.length - 1) {
-  //     this.setState({ currentStudent: this.state.currentStudent + 1 });
-  //   } else {
-  //     // Ideally here I would display some sort of feedback, like disabling
-  //     // the next button or a message or modal of some kind.
-  //     // but the current iteration of this function will do nothing
-  //     console.info(
-  //       "App nextStudent(): This is as far as we can go... doing nothing"
-  //     );
-  //   }
-  // };
+  nextStudent = () => {
+    // I know im being paranoid here, but just in case...
+    if (this.state.currentStudent > this.state.studentData.length - 1) {
+      this.setState({ currentStudent: this.state.studentData.length - 1 });
+      console.info(
+        "somehow the current student was set beyond the index of the list. resetting..."
+      );
+      return;
+    } else if (this.state.currentStudent < this.state.studentData.length - 1) {
+      this.setState({ currentStudent: this.state.currentStudent + 1 });
+    } else {
+      // Ideally here I would display some sort of feedback, like disabling
+      // the next button or a message or modal of some kind.
+      // but the current iteration of this function will do nothing
+      console.info(
+        "App nextStudent(): This is as far as we can go... doing nothing"
+      );
+    }
+  };
   previousStudent = () => {
     if (this.state.currentPosition < 0) {
       console.log("somehow the current student was set negative... resetting");
@@ -61,9 +62,15 @@ export default class StudentInfo extends React.Component {
   deleteStudent = () => {};
   addStudent = () => {};
   render() {
+    if (this.state.editMode) {
+      return (
+        <Edit student={this.state.studentData[this.state.currentStudent]} />
+      );
+    }
+
     return (
       <div id="StudentInfo">
-        <StudentInfoCard
+        <Card
           student={this.state.studentData[this.state.currentStudent]}
           currentPosition={this.state.currentStudent}
         />
