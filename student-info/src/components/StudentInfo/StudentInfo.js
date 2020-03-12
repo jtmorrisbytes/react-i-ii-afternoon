@@ -84,8 +84,13 @@ export default class StudentInfo extends React.Component {
     this.setState({ currentStudent: 0 });
   };
   deleteStudent = () => {};
-  editStudent = () => {};
+  startEditing = () => {
+    this.setState({ editMode: true });
+  };
   addStudent = () => {};
+  doneEditing = () => {
+    this.setState({ editMode: false });
+  };
   render() {
     return (
       <div id="StudentInfo">
@@ -102,10 +107,11 @@ export default class StudentInfo extends React.Component {
         )}
         <Controls
           previousStudent={this.previousStudent}
-          editStudent={this.editStudent}
+          editStudent={this.startEditing}
           deleteStudent={this.deleteStudent}
           addStudent={this.addStudent}
           nextStudent={this.nextStudent}
+          doneEditing={this.doneEditing}
           previousDisabled={this.state.currentStudent === 0}
           nextDisabled={
             this.state.currentStudent >= this.state.studentData.length - 1
