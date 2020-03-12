@@ -1,7 +1,7 @@
 #StudentInfo {
   height: calc(100vh - var(--Navigation-height));
   background-color: #222222;
-  padding: 25% 5%;
+  padding: 10vmin 5%;
 }
 
 #StudentInfo .controls {

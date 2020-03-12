@@ -1,0 +1,47 @@
+.StudentInfoCard {
+  background-color: #ebebeb;
+  padding: 0.5rem;
+}
+.StudentInfoCard .listPosition {
+  width: 100%;
+  margin: 0;
+  text-align: right;
+  font-size: 125%;
+}
+.StudentInfoCard .studentHeading {
+  margin-top: 0;
+  text-decoration: underline;
+  text-decoration-color: #11a7d7;
+}
+
+.studentOverviewItem .label {
+  font-weight: bold;
+}
+.studentOverviewItem {
+  margin-bottom: 0.3rem;
+}
+
+.StudentInfoCard > * {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.studentFavorites {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.studentFavorites .favoritesHeading {
+  margin: 0;
+}
+
+@media screen and (min-width: 500px) {
+  .StudentInfoCard > * {
+    margin-left: 2rem;
+  }
+}
+@media screen and (min-width: 720px) {
+  .StudentInfoCard > * {
+    margin-left: 3rem;
+  }
+}
