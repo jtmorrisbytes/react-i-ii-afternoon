@@ -22,9 +22,15 @@ function Controls(props) {
         &lt;Previous
       </button>
       <div className="actionGroup">
-        <button onClick={props.editStudent}>Edit</button>
-        <button onClick={props.deleteStudent}>Delete</button>
-        <button onClick={props.addStudent}>New</button>
+        {!props.editMode ? (
+          <>
+            <button onClick={props.editStudent}>Edit</button>
+            <button onClick={props.deleteStudent}>Delete</button>
+            <button onClick={props.addStudent}>New</button>)
+          </>
+        ) : (
+          <button onClick={props.doneEditing}>Done</button>
+        )}
       </div>
       <button onClick={props.nextStudent} disabled={props.nextDisabled}>
         Next&gt;
@@ -84,7 +90,10 @@ export default class StudentInfo extends React.Component {
     return (
       <div id="StudentInfo">
         {this.state.editMode ? (
-          <Edit student={this.state.studentData[this.state.currentStudent]} />
+          <Edit
+            {...this.state.studentData[this.state.currentStudent]}
+            editStudentField={this.editStudentField}
+          />
         ) : (
           <Card
             student={this.state.studentData[this.state.currentStudent]}
@@ -101,6 +110,7 @@ export default class StudentInfo extends React.Component {
           nextDisabled={
             this.state.currentStudent >= this.state.studentData.length - 1
           }
+          editMode={this.state.editMode}
         />
       </div>
     );
