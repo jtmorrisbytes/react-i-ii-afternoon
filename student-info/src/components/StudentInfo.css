@@ -3,3 +3,58 @@
   background-color: #222222;
   padding: 25% 5%;
 }
+
+#StudentInfo .controls {
+  display: flex;
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+#StudentInfo .controls .actionGroup {
+  margin-left: auto;
+  margin-right: auto;
+}
+#StudentInfo .controls > button {
+  color: #ffffff;
+  background-color: transparent;
+  font-weight: bold;
+  border: none;
+  font-size: 0.75rem;
+  min-width: 3rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#StudentInfo button:disabled {
+  cursor: not-allowed;
+}
+#StudentInfo button {
+  cursor: hand;
+}
+
+#StudentInfo .controls > button:disabled {
+  color: #ccc;
+}
+
+#StudentInfo .controls > button:first-of-type {
+  text-align: left;
+}
+
+#StudentInfo .controls > button:last-of-type {
+  text-align: right;
+}
+
+.actionGroup button {
+  background-color: #34a5da;
+  border: none;
+  border-radius: 0.75rem;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.7rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
