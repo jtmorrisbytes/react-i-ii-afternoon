@@ -1,38 +1,7 @@
-.StudentInfo.card {
-  background-color: #ebebeb;
-  padding: 0.5rem;
-}
-.StudentInfo.card .listPosition {
-  width: 100%;
-  margin: 0;
-  text-align: right;
-  font-size: 125%;
-}
 .StudentInfo.card .studentHeading {
   margin-top: 0;
   text-decoration: underline;
   text-decoration-color: #11a7d7;
-}
-
-.studentOverviewItem .label {
-  font-weight: bold;
-}
-.studentOverview.Item {
-  margin-bottom: 0.3rem;
-}
-
-.StudentInfo.Card > * {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.studentFavorites {
-  margin-top: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.studentFavorites .favoritesHeading {
-  margin: 0;
 }
 
 @media screen and (min-width: 500px) {
@@ -41,7 +10,7 @@
   }
 }
 @media screen and (min-width: 720px) {
-  .StudentInfocard > * {
+  .StudentInfo.card > * {
     margin-left: 3rem;
   }
 }

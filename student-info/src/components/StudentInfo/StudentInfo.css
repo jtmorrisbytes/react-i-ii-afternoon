@@ -3,7 +3,34 @@
   background-color: #222222;
   padding: 10vmin 5%;
 }
+.StudentInfo.card {
+  background-color: #ebebeb;
+  padding: 0.5rem;
+}
 
+.StudentInfo.card .listPosition {
+  width: 100%;
+  margin: 0;
+  text-align: right;
+  font-size: 125%;
+}
+.studentOverview.item {
+  margin-bottom: 0.3rem;
+}
+.StudentInfo.card > * {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.studentOverview.item .label {
+  font-weight: bold;
+}
+.studentFavorites {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+.studentFavorites .favoritesHeading {
+  margin: 0;
+}
 #StudentInfo .controls {
   display: flex;
   width: 100%;

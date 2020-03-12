@@ -2,7 +2,7 @@ import React from "react";
 import "./Edit.css";
 function StudentOverviewItem(props) {
   return (
-    <div className="studentOverviewItem">
+    <div className="studentOverview.item">
       <span className="label">{props.label + " "}</span>
       <span className="text">{props.text}</span>
     </div>
@@ -13,11 +13,11 @@ export default function Edit(props) {
   let { city, country, employer, title, name, favoriteMovies } = props.student;
   let hometown = (city || "") + (city && country ? ", " : "") + (country || "");
   return (
-    <div className="StudentInfo Card">
+    <div className="StudentInfo card">
       <div className="listPosition">{props.currentPosition || "0/0"}</div>
 
       <div className="studentName">
-        <input type="text" />
+        <input placeholder="First Name" type="text" />
         <input type="text" />
       </div>
 

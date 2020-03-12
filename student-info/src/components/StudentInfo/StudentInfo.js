@@ -15,13 +15,31 @@ const studentModel = {
   favoriteMovies: [""]
 };
 
+function Controls(props) {
+  return (
+    <div className="controls">
+      <button onClick={props.previousStudent} disabled={props.previousDisabled}>
+        &lt;Previous
+      </button>
+      <div className="actionGroup">
+        <button onClick={props.editStudent}>Edit</button>
+        <button onClick={props.deleteStudent}>Delete</button>
+        <button onClick={props.addStudent}>New</button>
+      </div>
+      <button onClick={props.nextStudent} disabled={props.nextDisabled}>
+        Next&gt;
+      </button>
+    </div>
+  );
+}
+
 export default class StudentInfo extends React.Component {
   constructor() {
     super();
     this.state = {
       studentData: [...data],
       currentStudent: 0,
-      editMode: false
+      editMode: true
     };
   }
 
@@ -60,39 +78,30 @@ export default class StudentInfo extends React.Component {
     this.setState({ currentStudent: 0 });
   };
   deleteStudent = () => {};
+  editStudent = () => {};
   addStudent = () => {};
   render() {
-    if (this.state.editMode) {
-      return (
-        <Edit student={this.state.studentData[this.state.currentStudent]} />
-      );
-    }
-
     return (
       <div id="StudentInfo">
-        <Card
-          student={this.state.studentData[this.state.currentStudent]}
-          currentPosition={this.state.currentStudent}
+        {this.state.editMode ? (
+          <Edit student={this.state.studentData[this.state.currentStudent]} />
+        ) : (
+          <Card
+            student={this.state.studentData[this.state.currentStudent]}
+            currentPosition={this.state.currentStudent}
+          />
+        )}
+        <Controls
+          previousStudent={this.previousStudent}
+          editStudent={this.editStudent}
+          deleteStudent={this.deleteStudent}
+          addStudent={this.addStudent}
+          nextStudent={this.nextStudent}
+          previousDisabled={this.state.currentStudent === 0}
+          nextDisabled={
+            this.state.currentStudent >= this.state.studentData.length - 1
+          }
         />
-        <div className="controls">
-          <button
-            onClick={this.previousStudent}
-            disabled={this.state.currentStudent <= 0}
-          >
-            &lt;Previous
-          </button>
-          <div className="actionGroup">
-            <button>Edit</button>
-            <button onClick={this.deleteStudent}>Delete</button>
-            <button onClick={this.addStudent}>New</button>
-          </div>
-          <button
-            onClick={this.nextStudent}
-            disabled={this.state.currentStudent >= this.state.studentData - 1}
-          >
-            Next&gt;
-          </button>
-        </div>
       </div>
     );
   }

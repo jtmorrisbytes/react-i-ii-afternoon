@@ -13,7 +13,7 @@ export default function StudentInfoCard(props) {
   let { city, country, employer, title, name, favoriteMovies } = props.student;
   let hometown = (city || "") + (city && country ? ", " : "") + (country || "");
   return (
-    <div className="StudentInfo Card">
+    <div className="StudentInfo card">
       <div className="listPosition">{props.currentPosition || "0/0"}</div>
       <h1 className="studentHeading">{name.first + " " + name.last}</h1>
       <div className="studentOverview">
